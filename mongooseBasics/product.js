@@ -61,7 +61,8 @@ productSchema.methods.addCategory = function (newCat) {
 const Product = mongoose.model('Product', productSchema);
 
 const findProduct = async () => {
-    const foundProduct = await Product.findOne({ name: 'Bike Helmet' })
+    const foundProduct = await Product.findOne({ name: 'Cycling Jersey' })
+    // foundProduct.greet();
     console.log(foundProduct);
     await foundProduct.toggleOnSale();
     console.log(foundProduct);
@@ -70,7 +71,7 @@ const findProduct = async () => {
 }
 findProduct();
 
-// const bike = new Product({ name: 'Cycling Jersey', price: 28.50, categories: ['Cycling'], size: 'XS' })
+// const bike = new Product({ name: 'Tire Pump', price: 10.50, categories: ['Cycling']})
 // bike.save()
 //     .then(data => {
 //         console.log("IT WORKED");
